@@ -1,0 +1,29 @@
+.details-div {
+    width: calc(var(--video-container-width) - 20px);
+    position: absolute;
+    right: 20px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgb(200, 200, 200);
+    text-align: center;
+    margin-top: 10px;
+    height: calc(100vh - 3.25rem - 40px - 45px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-collapsed {
+    right: calc(0px - var(--video-container-width)) !important;
+}
+
+.video-frame {
+    border: 1px solid rgb(200, 200, 200);
+    width: calc(var(--video-container-width) - 60px);
+    height: calc((var(--video-container-width) - 60px) / (560 / 315));
+}
+
+.details-close {
+    margin-top: 50px;
+}

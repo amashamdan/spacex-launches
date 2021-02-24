@@ -9,7 +9,7 @@ export default class Cards extends Component {
     }
 
     render() {
-        const { data } = this.props;
+        const { data, selectedVideo } = this.props;
 
         const cards = data.map((entry, index) => {
             const videoLink = entry.links.video_link;
@@ -28,7 +28,13 @@ export default class Cards extends Component {
             </div>
         })
 
-        return <div className="cards-container">
+        let containerClass = "cards-container";
+        
+        if (selectedVideo) {
+            containerClass += " cards-container-small";
+        }
+
+        return <div className={containerClass}>
             {cards}
         </div>
     }

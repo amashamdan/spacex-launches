@@ -52,10 +52,12 @@ export default class App extends Component {
             content = <p>ERROR</p>;
         } else {
             const shownData = this.getShownData(data, paginationSize, page);
-            content = <div className="video-cards-container">
+            content = <div className="content-container">
                 <Controls paginationSize={paginationSize} updatePaginationSize={this.updatePaginationSize} paginationSizes={paginationSizes} />
-                <Video selectedVideo={selectedVideo} />
-                <Cards data={shownData} setSelectedVideo={this.setSelectedVideo} />
+                <div className="level video-cards-container">
+                    <Cards data={shownData} selectedVideo={selectedVideo} setSelectedVideo={this.setSelectedVideo} />
+                    <Video selectedVideo={selectedVideo} setSelectedVideo={this.setSelectedVideo} />
+                </div>
                 <Paginator paginationSize={paginationSize} page={page}  updatePageNumber={this.updatePageNumber} dataLength={dataLength} />
             </div>;
         }

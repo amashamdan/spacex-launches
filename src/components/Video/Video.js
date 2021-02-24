@@ -3,18 +3,35 @@ import { getVideoId } from "../../helpers/video";
 import "./Video.css";
 
 export default class Video extends Component {
+    constructor(props) {
+        super(props);
+        this.setSelectedVideo = this.setSelectedVideo.bind(this);
+    }
+
     render() {
         const { selectedVideo } = this.props;
 
+        let content;
+        let className = "media-content details-div";
+
         if (!selectedVideo) {
-            return null;
+            content = "";
+            className += " video-collapsed";
+        } else {
+            const videoId = getVideoId(selectedVideo.links.video_link);
+            content = <div>
+                <iframe className="video-frame" src={`https://www.youtube.com/embed/${videoId}`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <p>{selectedVideo.details ? selectedVideo.details : "No details available for this video"}</p>
+                <button className="button is-danger details-close" onClick={this.setSelectedVideo}>Close</button>
+            </div>
         }
 
-        const videoId = getVideoId(selectedVideo.links.video_link);
-
-        return <div>
-            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>{selectedVideo.details ? selectedVideo.details : "No details available for this video"}</p>
+        return <div className={className}>
+            {content}
         </div>
+    }
+
+    setSelectedVideo() {
+        this.props.setSelectedVideo(null);
     }
 }

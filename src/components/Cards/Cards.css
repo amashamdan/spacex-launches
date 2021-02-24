@@ -1,3 +1,13 @@
+.cards-container {
+    width: 100%;
+    transition: all 0.5s ease;
+    right: 0;
+}
+
+.cards-container-small {
+    width: calc(100% - var(--video-container-width));
+}
+
 .card {
     margin-top: 10px;
     display: flex;

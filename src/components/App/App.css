@@ -1,3 +1,7 @@
+:root {
+    --video-container-width: 600px;
+}
+
 * {
     overflow-y: hidden !important;
 }
@@ -13,8 +17,13 @@
     overflow-y: auto !important;
 }
 
-.video-cards-container {
+.content-container {
     width: 100%;
+}
+
+.video-cards-container {
+    display: flex;
+    align-items: flex-start;
 }
 
 /* width */
