@@ -16,8 +16,10 @@ export default class Cards extends Component {
             const videoId = videoLink ? getVideoId(videoLink) : null;
 
             return <div className="card" key={index} onClick={this.setSelectedVideo(entry)}>
-                <img className="card-image" src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} />
-                <div>
+                <div className="column is-3">
+                    <img className="card-image" src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} />
+                </div>
+                <div className="column is-9">
                     <p className="card-header-title">Mission: {entry.mission_name}</p>
                     <p className="card-content">Rocket: {entry.rocket.rocket_name}</p>
                     <p className="card-content">Launched from: {entry.launch_site.site_name_long}</p>

@@ -1,10 +1,8 @@
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px;
     font-size: 0.8em;
     height: 40px;
+    width: 100%;
 }
 
 .footer-section {
@@ -13,16 +11,11 @@
     flex-wrap: wrap;
 }
 
-.footer-author {
-    width: 60%;
-}
-
-.footer-author li {
+.footer-section li {
     list-style: none;
     margin-left: 20px;
 }
 
 .footer-copyright {
     justify-content: flex-end;
-    width: 40%;
 }

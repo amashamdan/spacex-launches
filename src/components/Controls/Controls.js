@@ -9,7 +9,9 @@ export default class Controls extends Component {
 
     render() {
         return <div className="controls-div columns">
-            <div className="column is-9"></div>
+            <div className="column is-9">
+                Click on a card to expand the launch's information
+            </div>
             <div className="column is-3">
                 <span>Results per page: </span>
                 {this.renderPaginationSizeMenu()}
