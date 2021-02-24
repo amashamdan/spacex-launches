@@ -1,10 +1,16 @@
 :root {
-    --video-container-width: 600px;
+    --video-container-width: 500px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1300px) {
     :root {
-        --video-container-width: 500px;
+        --video-container-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    :root {
+        --video-container-width: 800px;
     }
 }
 
