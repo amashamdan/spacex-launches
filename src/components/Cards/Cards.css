@@ -25,3 +25,7 @@
 .card-content {
     padding: 0.5rem 1rem !important;
 }
+
+.card-image {
+    width: 260px;
+}

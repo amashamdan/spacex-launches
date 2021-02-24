@@ -2,6 +2,12 @@
     --video-container-width: 600px;
 }
 
+@media screen and (max-width: 1300px) {
+    :root {
+        --video-container-width: 500px;
+    }
+}
+
 * {
     overflow-y: hidden !important;
 }
