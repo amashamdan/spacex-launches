@@ -29,7 +29,7 @@ export default class Paginator extends Component {
     }
 
     renderFirstGroupButton(page, lastPage) {
-        if (lastPage < 3 || lastPage - page <= 2) {
+        if (lastPage < 3 || lastPage - page <= 1) {
             return null;
         }
 
