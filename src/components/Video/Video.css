@@ -7,7 +7,7 @@
     box-shadow: 0px 0px 10px 1px rgb(200, 200, 200);
     text-align: center;
     margin-top: 10px;
-    height: calc(100vh - 3.25rem - 40px - 45px);
+    height: calc(100vh - 3.25rem - 40px - 45px - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,4 +26,14 @@
 
 .details-close {
     margin-top: 50px;
+}
+
+.successful-launch {
+    font-weight: bold;
+    color: rgb(74, 162, 85);
+}
+
+.failed-launch {
+    font-weight: bold;
+    color: rgb(199, 66, 68);
 }
