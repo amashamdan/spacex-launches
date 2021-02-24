@@ -24,7 +24,6 @@ export function getLaunches() {
                 }
             `
         }).then((result) => {
-            console.log(result);
             resolve({success: true, data: result});
         }).catch((error) => {
             reject(error);
