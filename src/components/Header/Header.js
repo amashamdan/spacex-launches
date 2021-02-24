@@ -3,8 +3,8 @@ import "./Header.css";
 
 export default class Header extends Component {
     render() {
-        return <div>
-            Header
+        return <div className="navbar is-dark">
+            <p className="navbar-brand">SpaceX Launches Explorer</p>
         </div>
     }
 }

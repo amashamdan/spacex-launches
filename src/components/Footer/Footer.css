@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 0.8em;
+    height: 40px;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-author {
+    width: 60%;
+}
+
+.footer-author li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.footer-copyright {
+    justify-content: flex-end;
+    width: 40%;
+}
